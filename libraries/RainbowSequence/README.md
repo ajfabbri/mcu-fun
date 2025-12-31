@@ -8,7 +8,7 @@ Can be used with FastLED to implement rainbow-like colors and movement.
 
 ### How to use with FastLED?
 
-If you import FastLED.h before importing this library, additional convenience
-functions will be included for generating FastLED color types (e.g. CRGB).
+This library doesn't depend on FastLED directly, but you can use the
+`TO_CRGB()` macro to convert from our `struct rgb` to FastLED's `CRGB` value.
 
 See the [header file](./src/RainbowSequence.h) for details.
