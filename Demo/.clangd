@@ -1,0 +1,7 @@
+CompileFlags:
+  Add: [
+    "-I/Users/fabbri/Library/Arduino15/packages/esp32/hardware/esp32/*/cores/esp32",
+    "-I/Users/fabbri/Library/Arduino15/packages/esp32/hardware/esp32/*/variants/esp32s3",
+    "-I/Users/fabbri/Library/Arduino15/packages/esp32/hardware/esp32/*/libraries",
+  ]
+

@@ -1,0 +1,7 @@
+board_manager:
+    additional_urls:
+        - https://espressif.github.io/arduino-esp32/package_esp32_index.json
+directories:
+    #data: $HOME/Library/Arduino15
+    data: /Users/fabbri/Library/Arduino15
+    user: /Users/fabbri/Code/mcu-fun
