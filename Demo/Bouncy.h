@@ -9,10 +9,10 @@
 
 // Tunable constants. TODO make these configurable at runtime?
 const float GRAVITY = 9.8;  // m/s^2
-const float BOUNCE_ENERGY_LOSS = 0.15;
+const float BOUNCE_ENERGY_LOSS = 0.01;
 const float WIND_RESISTANCE = 0.001;
 const CRGB BASE_COLOR = CRGB::Red;
-const float DECAY_FACTOR = 0.5;
+const float DECAY_FACTOR = 0.9;
 // Z-axis of bounce sim is based on 100 m height.
 // Use a value < 1 to model a smaller height.
 const float LENGTH_SCALE = 0.1;
@@ -49,6 +49,9 @@ class Bouncy {
 
     void render();
     void render_color(CRGB color);
+
+    float get_velocity();
+    float get_position();
 };
 
 #endif

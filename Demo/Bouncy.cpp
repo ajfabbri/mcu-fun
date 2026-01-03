@@ -85,11 +85,26 @@ void Bouncy::write_leds(CRGB color) {
     }
 }
 
+static const CRGB FLOOR_COLOR = CRGB(2, 0, 0);
 CRGB Bouncy::decay_color(CRGB c, float factor) {
+
+#if 1
+    return blend(c, FLOOR_COLOR, (uint8_t)((1.0 - factor) * 255));
+#else
+
     return CRGB(
         (uint8_t)((float)c.r * factor),
         (uint8_t)((float)c.g * factor),
         (uint8_t)((float)c.b * factor)
     );
+#endif
+}
+
+float Bouncy::get_position() {
+    return position;
+}
+
+float Bouncy::get_velocity() {
+    return velocity;
 }
 
