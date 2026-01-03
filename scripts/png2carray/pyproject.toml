@@ -1,0 +1,39 @@
+[project]
+name = "png2carray"
+version = "0.0.1"
+authors = [{ name = "Aaron Fabbri", email = "" }]
+description = "Convert PNG image to C array bitmap for pasting into arduino and other embedded projects."
+readme = "dist-readme.md"
+requires-python = ">=3.10"
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: Apache Software License",
+  "Operating System :: POSIX :: Linux",
+  "Topic :: File Formats",
+]
+dynamic = ["dependencies"]
+
+[project.urls]
+Homepage = "https://github.com/ajfabbri/mcu-fun"
+Issues = "https://github.com/ajfabbri/mcu-fun/issues"
+
+[project.scripts]
+png2c = "png2carray.generate:main"
+
+[build-system]
+requires = ["hatchling", "hatch-requirements-txt"]
+build-backend = "hatchling.build"
+
+[tool.hatch.metadata.hooks.requirements_txt]
+files = ["requirements.txt"]
+
+[tool.hatch.build.targets.wheel]
+include = [
+  "/png2carray",
+  "LICENSE",
+  "requirements.txt",
+  "README.md",
+  "dist-readme.md",
+]
+#exclude = [ ]

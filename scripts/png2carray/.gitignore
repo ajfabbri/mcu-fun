@@ -1,0 +1,16 @@
+# Compiled class file
+*.class
+
+# Log file
+*.log
+
+# Package Files #
+*.jar
+*.tar.gz
+dist/
+
+# python virtualenv
+**/venv/
+**/venv-publish/
+
+__pycache__/
